@@ -1,0 +1,7 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+
+body {
+  background: colors.$BG_COLOR;
+}
