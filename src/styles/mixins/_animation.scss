@@ -11,6 +11,7 @@
     }
   }
 }
+
 @mixin mainFooter {
   @keyframes mainFooter {
     to {
@@ -20,27 +21,14 @@
   }
 }
 
-@mixin loadText {
-  @keyframes loadText {
+@mixin rotateText {
+  @keyframes rotateText {
     0% {
-      opacity: 0;
+      transform: rotate(0deg);
     }
 
     100% {
-      opacity: 1;
-    }
-  }
-}
-@mixin load {
-  @keyframes load {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+      transform: rotate(360deg);
     }
   }
 }
