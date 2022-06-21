@@ -2,6 +2,7 @@
 @use '/src/styles/mixins/flexbox';
 @use '/src/styles/mixins/responsive';
 @use '/src/styles/mixins/animation';
+@use '/src/styles/base/ir';
 
 .mainContainer {
   width: 100%;
