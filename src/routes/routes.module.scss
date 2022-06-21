@@ -3,5 +3,6 @@
 @use '/src/styles/mixins/responsive';
 
 body {
+  color: colors.$TEXT_COLOR;
   background: colors.$BG_COLOR;
 }
