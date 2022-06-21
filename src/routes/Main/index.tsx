@@ -11,7 +11,7 @@ const MAIN_ITEM = [
   {
     id: 1,
     item: 'left',
-    href: 'project',
+    href: 'projects',
     img: ProfileLeftImg,
     svg: <ProjectTextSvg />,
   },
