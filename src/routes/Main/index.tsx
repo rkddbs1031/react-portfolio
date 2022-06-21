@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import ProfileLeftImg from 'assets/img/profile_left.png'
 import ProfileRightImg from 'assets/img/profile_right.png'
 import { ProjectTextSvg, AboutTextSvg } from 'assets/svgs'
+
 import Contents from 'routes/_components/Contents'
 import Footer from './Footer'
 import styles from './main.module.scss'
@@ -29,6 +30,7 @@ const Main = () => {
     <>
       <Contents>
         <section className={styles.mainContainer}>
+          <h2 className={styles.ir_su}>home</h2>
           <ul>
             {MAIN_ITEM.map((item) => (
               <li key={item.id} className={styles[item.item]}>
