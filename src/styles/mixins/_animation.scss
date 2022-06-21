@@ -32,3 +32,12 @@
     }
   }
 }
+
+@mixin loadText {
+  @keyframes loadText {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
