@@ -1,2 +1,7 @@
 export { ReactComponent as ProjectTextSvg } from './main_left.svg'
 export { ReactComponent as AboutTextSvg } from './main_right.svg'
+export { ReactComponent as ArrowPrevIcon } from './arrow_prev.svg'
+export { ReactComponent as ArrowNextIcon } from './arrow_next.svg'
+export { ReactComponent as GithubIcon } from './github.svg'
+export { ReactComponent as VelogIcon } from './velog.svg'
+export { ReactComponent as NotionIcon } from './notion.svg'
