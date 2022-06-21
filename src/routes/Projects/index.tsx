@@ -22,6 +22,7 @@ const Project = () => {
     <>
       <Contents>
         <section className={styles.projectContainer}>
+          <h2 className={styles.ir_su}>Projects</h2>
           <div className={styles.tab}>
             <ul>
               {TAB_ITEM.map((item) => (
@@ -36,7 +37,7 @@ const Project = () => {
           <TabContents tabKey={tabKey} hrefItem={hrefItem} />
         </section>
       </Contents>
-      <Footer />
+      <Footer path='projects' />
     </>
   )
 }
