@@ -18,19 +18,36 @@
   @include animation.h1Show;
 
   h1 a {
-    font-family: Abel;
+    font-family: Abel, sans-serif;
     font-size: 24px;
     font-weight: normal;
     color: colors.$TEXT_COLOR;
   }
 
-  .nav ul {
-    @include flexbox.flexbox(between, center);
-    gap: 10px;
-
-    li a {
+  .info,
+  .nav {
+    a {
+      font-family: Abel, sans-serif;
       font-size: 13px;
       color: colors.$TEXT_COLOR;
     }
+  }
+
+  .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 30px;
+    transform: translate(-50%, -50%);
+    @include flexbox.flexbox(between, center);
+
+    li {
+      width: 120px;
+    }
+  }
+
+  .nav ul {
+    @include flexbox.flexbox(between, center);
+    gap: 10px;
   }
 }
