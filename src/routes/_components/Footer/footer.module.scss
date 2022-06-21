@@ -1,0 +1,142 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/animation';
+
+.footerContainer {
+  background: colors.$FOOTER;
+
+  a {
+    font-family: Sunflower, sans-serif;
+    color: colors.$FOOTER_TEXT;
+  }
+
+  .footerTop {
+    position: relative;
+    width: 100%;
+    padding: 0 50px;
+
+    ul {
+      width: inherit;
+      @include flexbox.flexbox(center, center);
+
+      li {
+        @include flexbox.flexbox(center, center);
+        width: 50%;
+        height: 250px;
+        text-align: center;
+
+        a {
+          position: relative;
+          z-index: 5;
+          font-family: Sunflower, sans-serif;
+          font-size: 50px;
+        }
+
+        &:first-child {
+          border-right: 1px solid colors.$FOOTER_LINE;
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+      }
+
+      svg {
+        width: 25px;
+        fill: transparent;
+        stroke: colors.$FOOTER_TEXT;
+        stroke-width: 3;
+      }
+
+      .prev {
+        left: 50px;
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      .next {
+        right: 50px;
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+  }
+
+  .footerBottom {
+    position: relative;
+    padding: 30px 50px;
+    border-top: 1px solid colors.$FOOTER_LINE;
+    @include flexbox.flexbox(between, center);
+
+    .logo {
+      flex: 0 0 33%;
+    }
+
+    .logo a {
+      font-size: 20px;
+    }
+
+    .info {
+      flex: 0 0 210px;
+
+      ul {
+        li {
+          +li {
+            margin-top: 7px;
+          }
+        }
+
+        em {
+          font-size: 12px;
+          color: colors.$FOOTER_TEXT;
+        }
+      }
+    }
+
+    .right {
+      flex: 0 0 33%;
+      @include flexbox.flexbox(center, end);
+      flex-direction: column;
+
+      .social {
+        width: 150px;
+        @include flexbox.flexbox(between, center);
+
+        svg {
+          transform: scale(0.6);
+
+          path {
+            fill: colors.$FOOTER_TEXT;
+          }
+        }
+
+        li:last-child {
+          svg {
+            padding: 7px;
+            background: colors.$FOOTER_TEXT;
+            border-radius: 50%;
+            transform: scale(0.7);
+
+            path {
+              fill: colors.$FOOTER;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        font-size: 12px;
+        color: colors.$FOOTER_TEXT;
+      }
+    }
+  }
+}
