@@ -14,7 +14,7 @@
   @include flexbox.flexbox(between, center);
   opacity: 0;
   transform: translateY(-100px);
-  animation: h1Show 0.6s 1.4s ease forwards;
+  animation: h1Show 0.6s 1s ease forwards;
   @include animation.h1Show;
 
   h1 a {

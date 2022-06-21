@@ -12,6 +12,14 @@
   }
 }
 
+@mixin mainShow {
+  @keyframes mainShow {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
 @mixin mainFooter {
   @keyframes mainFooter {
     to {
