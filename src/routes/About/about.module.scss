@@ -1,0 +1,9 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/base/ir';
+
+.aboutContainer {
+  border: 1px solid;
+}
