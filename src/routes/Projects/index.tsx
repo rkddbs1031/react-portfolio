@@ -1,21 +1,15 @@
-import { MouseEvent, useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { MouseEvent, useState } from 'react'
+
+import { TAB_ITEM } from 'utils/tab'
 import { cx } from 'styles'
 
-import { TAB_ITEM, getContents } from 'utils/tab'
-
 import Contents from '../_components/Contents'
+import TabContents from './TabContents'
 import Footer from '../_components/Footer'
 import styles from './project.module.scss'
 
-interface IContentList {
-  id: number
-  item: string
-}
-
 const Project = () => {
   const [tabKey, setTabKey] = useState<string>('react')
-  const [contentList, setContentList] = useState<IContentList[]>()
   const [hrefItem, setHrefItem] = useState<string>('react')
 
   const handleTabClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -23,9 +17,6 @@ const Project = () => {
     setTabKey(String(key))
     setHrefItem(String(key))
   }
-  useEffect(() => {
-    if (tabKey) setContentList(getContents(tabKey))
-  }, [tabKey])
 
   return (
     <>
@@ -42,15 +33,7 @@ const Project = () => {
               ))}
             </ul>
           </div>
-          <div className={styles.tabContents}>
-            <ul>
-              {contentList?.map((item) => (
-                <li key={item.id}>
-                  <NavLink to={hrefItem}>{item.item}</NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <TabContents tabKey={tabKey} hrefItem={hrefItem} />
         </section>
       </Contents>
       <Footer />

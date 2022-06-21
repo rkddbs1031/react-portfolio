@@ -20,6 +20,7 @@
     }
   }
 }
+
 @mixin mainFooter {
   @keyframes mainFooter {
     to {
@@ -37,6 +38,14 @@
 
     100% {
       transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin opacity {
+  @keyframes opacity {
+    to {
+      opacity: 1;
     }
   }
 }
