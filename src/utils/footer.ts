@@ -21,13 +21,29 @@ const FOOTER_TOP = [
     items: [
       {
         id: 21,
-        text: 'Project',
+        text: 'Projects',
         href: '/projects',
       },
       {
         id: 22,
         text: 'Contact',
         href: '/contact',
+      },
+    ],
+  },
+  {
+    id: 3,
+    key: 'react',
+    items: [
+      {
+        id: 31,
+        text: 'Projects',
+        href: '/projects',
+      },
+      {
+        id: 32,
+        text: 'Web',
+        href: '/web',
       },
     ],
   },
