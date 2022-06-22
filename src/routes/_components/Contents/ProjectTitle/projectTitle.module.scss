@@ -1,0 +1,102 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/base/ir';
+
+.titleContainer {
+  position: relative;
+  @include flexbox.flexbox(center, center);
+  flex-direction: column;
+  height: 100vh;
+  background: colors.$BLACK;
+
+  .aniContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+
+    span {
+      display: inline-block;
+      font-family: Miracle, sans-serif;
+      font-size: 300px;
+      color: colors.$ANI_COLOR;
+      animation: aniLoop 20s linear infinite;
+    }
+  }
+
+  .titleWrap {
+    position: relative;
+    z-index: 5;
+    width: 655px;
+
+    .title {
+      margin-bottom: 30px;
+
+      p {
+        overflow: hidden;
+        font-family: Miracle, sans-serif;
+
+        span {
+          display: inline-block;
+          font-size: 65px;
+          letter-spacing: 2px;
+          opacity: 0;
+          transform: translateY(50px);
+          animation: loadText 0.8s 0.3s ease forwards;
+        }
+
+        + p {
+          margin-top: 10px;
+
+          span {
+            animation-delay: 0.4s;
+          }
+        }
+      }
+    }
+
+    .description {
+      @include flexbox.flexbox(between, center);
+      font-family: 'Chosunilbo_myungjo', sans-serif;
+
+      .scroll {
+        width: 25%;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: loadText 0.4s 0.8s ease forwards;
+
+        span {
+          display: inline-block;
+          width: 0;
+          height: 1px;
+          margin-left: 10px;
+          vertical-align: middle;
+          background: colors.$TEXT_COLOR;
+          animation: scrollSpan 1s 0.8s ease forwards;
+        }
+      }
+
+      .text {
+        width: 75%;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 18px;
+
+        span {
+          display: inline-block;
+          letter-spacing: 0.3px;
+          opacity: 0;
+          transform: translateY(30px);
+          animation: loadText 1s 0.8s ease forwards;
+        }
+      }
+    }
+  }
+}
+
+@include animation.loadText;
+@include animation.aniLoop;
+@include animation.scrollSpan;
