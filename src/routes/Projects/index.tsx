@@ -6,7 +6,7 @@ import { cx } from 'styles'
 import Contents from '../_components/Contents'
 import TabContents from './TabContents'
 import Footer from '../_components/Footer'
-import styles from './project.module.scss'
+import styles from './projects.module.scss'
 
 const Project = () => {
   const [tabKey, setTabKey] = useState<string>('react')

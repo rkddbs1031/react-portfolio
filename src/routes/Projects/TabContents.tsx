@@ -4,7 +4,7 @@ import { useState, useEffect } from 'hooks'
 import { getContents } from 'utils/tab'
 import { IContentList } from 'types/projects'
 
-import styles from './project.module.scss'
+import styles from './projects.module.scss'
 
 interface IProps {
   tabKey: string
