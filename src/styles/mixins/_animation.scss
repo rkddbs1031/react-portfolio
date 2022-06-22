@@ -58,3 +58,23 @@
     }
   }
 }
+
+@mixin aniLoop {
+  @keyframes aniLoop {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@mixin scrollSpan {
+  @keyframes scrollSpan {
+    to {
+      width: 65px;
+    }
+  }
+}
