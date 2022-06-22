@@ -12,7 +12,7 @@ interface IProps {
 const ProjectTitle = ({ ANI_INFO, TITLE_INFO, DESCRIPTION }: IProps) => {
   return (
     <section className={styles.titleContainer}>
-      <h2 className={styles.ir_su}>프로젝트 부분</h2>
+      <h2 className={styles.ir_su}>프로젝트 타이틀 부분</h2>
       {ANI_INFO.map((item) => (
         <AniInfo key={item.span} item={item.span} />
       ))}
