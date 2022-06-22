@@ -1,0 +1,136 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/base/ir';
+
+.contentsContainer {
+  padding: 100px 0;
+  background: #cccac6;
+
+  .project {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    padding: 50px 0;
+    margin: 0 auto;
+    @include flexbox.flexbox(between, end);
+
+    +.project {
+      margin-top: 100px;
+    }
+
+    .num {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: Sunflower, sans-serif;
+      font-size: 650px;
+      color: colors.$NUM_COLOR;
+      letter-spacing: 0.5px;
+    }
+
+    .left {
+      position: relative;
+      width: 40%;
+
+      .desc {
+        padding-left: 8px;
+        font-family: 'Chosunilbo_myungjo', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: colors.$SUB_TEXT;
+        border-left: 2px solid colors.$DESC_BORDER;
+      }
+    }
+
+    .right {
+      position: relative;
+      flex-direction: column;
+      width: 50%;
+      margin-top: 150px;
+      @include flexbox.flexbox(center, start);
+
+      .title {
+        margin-bottom: 30px;
+        font-family: Miracle, sans-serif;
+        font-size: 60px;
+        line-height: 70px;
+        color: colors.$BLACK;
+
+        span {
+          display: block;
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .btnContainer {
+        margin-bottom: 50px;
+
+        ul {
+          @include flexbox.flexbox(start, center);
+
+          li {
+            + li {
+              margin-left: 50px;
+            }
+          }
+
+          a {
+            position: relative;
+            z-index: 3;
+            margin-left: 10px;
+            font-size: 14px;
+            color: colors.$BLACK;
+            text-transform: uppercase;
+
+            &::before {
+              position: absolute;
+              top: 50%;
+              left: -13px;
+              z-index: -1;
+              display: block;
+              width: 30px;
+              height: 30px;
+              content: '';
+              background: rgba(colors.$TEXT_COLOR, 0.8);
+              border-radius: 50px;
+              transition: 0.5s width;
+              transform: translateY(-50%);
+            }
+
+            &:hover::before {
+              width: 142%;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(2n) {
+      flex-direction: row-reverse;
+
+      .num {
+        right: 0;
+        left: auto;
+      }
+
+      .right {
+        align-items: flex-end;
+
+        .title {
+          text-align: right;
+        }
+
+        .btnContainer a {
+          margin-right: 15px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
