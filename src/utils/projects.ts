@@ -14,6 +14,11 @@ const ANI_INFO = [
     key: 'script',
     items: [{ span: 'Script Project' }],
   },
+  {
+    id: 4,
+    key: 'animation',
+    items: [{ span: 'Animation' }],
+  },
 ]
 
 const TITLE_INFO = [
@@ -59,6 +64,20 @@ const TITLE_INFO = [
       },
     ],
   },
+  {
+    id: 10,
+    key: 'animation',
+    items: [
+      {
+        id: 11,
+        text: 'One-of-the-Projects',
+      },
+      {
+        id: 12,
+        text: 'is Dynamic Animation',
+      },
+    ],
+  },
 ]
 
 const DESCRIPTION = [
@@ -81,6 +100,13 @@ const DESCRIPTION = [
     key: 'script',
     items: {
       text: '21년도 부터 작업한 스크립트 프로젝트입니다. 자바스크립트에 대해 더 열심히 공부해서 멋지고 완벽한 작업물들을 만들어내고 싶습니다!',
+    },
+  },
+  {
+    id: 4,
+    key: 'animation',
+    items: {
+      text: 'Transform과 KEYFRAME, SVG를 이용하여 만든 애니메이션 작업물입니다. 더욱더 역동적이고 재밌는 요소가 담긴 애니메이션을 만들어내고 싶습니다!',
     },
   },
 ]
@@ -365,7 +391,7 @@ const PROJECT_INFO = [
       {
         id: 15,
         num: '01',
-        desc: '스크롤 값에 따라 다양한 PARALLAX EFFECT를 주는 스크립트입니다.',
+        desc: '2021년도에 제이쿼리와 css를 이용하여 만든 작업물입니다. 스크롤 값에 따라 다양한 PARALLAX EFFECT를 주는 스크립트입니다.',
         h2: {
           text1: 'PARALLAX EFFECT',
           text2: '',
@@ -385,7 +411,7 @@ const PROJECT_INFO = [
       {
         id: 16,
         num: '02',
-        desc: '마우스 커서의 움직임에 따라 다양한 mouse effect를 주는 스크립트입니다.',
+        desc: '2021년도에 제이쿼리와 css를 이용하여 만든 작업물입니다. 마우스 커서의 움직임에 따라 다양한 mouse effect를 주는 스크립트입니다.',
         h2: {
           text1: 'MOUSE EFFECT',
           text2: '',
@@ -405,7 +431,7 @@ const PROJECT_INFO = [
       {
         id: 17,
         num: '03',
-        desc: '스크립트를 이용하여 보여주는 다양한 slide입니다.',
+        desc: '2021년도에 제이쿼리와 css를 이용하여 만든 작업물입니다.  스크립트를 이용하여 보여주는 다양한 slide입니다.',
         h2: {
           text1: 'SLIDER EFFECT',
           text2: '',
@@ -425,7 +451,7 @@ const PROJECT_INFO = [
       {
         id: 18,
         num: '04',
-        desc: 'javascript를 이용하여 chrome의 momentum앱을 clone하였습니다. TODO LIST, 랜덤 배경화면, 시계,날씨 정보를 알 수 있습니다',
+        desc: '순수 javascript를 이용하여 chrome의 momentum앱을 clone하였습니다. TODO LIST, 랜덤 배경화면, 시계,날씨 정보를 알 수 있습니다',
         h2: {
           text1: 'MOMENTUM',
           text2: '',
