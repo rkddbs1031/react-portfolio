@@ -472,6 +472,45 @@ const PROJECT_INFO = [
   },
 ]
 
+const ANIMATAION_INFO = [
+  {
+    id: 1,
+    num: '01',
+    title: 'CUBE',
+    desc: '3D CUBE 애니메이션 입니다. cube안에 6개의 div를 넣고 perspective와 z축 활용으로 3D 도형을 연출했으며 여기에 keyframes를 이용해 스스로 회전하고 크기 변화를 갖도록 하였습니다.',
+  },
+  {
+    id: 2,
+    num: '02',
+    title: 'WAVE',
+    desc: 'Wave 애니메이션입니다. row라는 div 박스 안에 10개의 circle이라는 div를 만든 뒤 이 row를 10개 더 만들어 10x10의 배열이 될 수 있도록 정렬시켜줍니다. transform의 rotate각도와 scale크기를 조절하여 spin효과를 주고 circle에 animation-delay를 주어 물결 효과를 주었습니다.',
+  },
+  {
+    id: 3,
+    num: '03',
+    title: 'TAIL',
+    desc: 'Tail효과를 주는 애니메이션입니다. 5개의 div를 만든 뒤 translateY의 변화를 주어 y축으로 움직이게 만들었으며 각 div에 animation-delay를 활용하여 따라다니는 효과를 주었습니다. 또한, div를 감싸고 있는 circle에 translateX의 변화를 주어 X축으로 움직이는 애니메이션을 추가하여 좌우로 움직이게 효과를 주었습니다.',
+  },
+  {
+    id: 4,
+    num: '04',
+    title: '3D CARD',
+    desc: '3D CARD 애니메이션입니다. 4개의 div를 만들어 position absolute를 이용해 같은 위치에 배치를 합니다. 그리고 transform을 이용해 모양을 변형한 뒤 키프레임을 이용해 각 translateY의 값을 다르게 주어 효과를 주었습니다. 마우스 오버시 효과를 주는 등에 응용할 수 있습니다.',
+  },
+  {
+    id: 5,
+    num: '05',
+    title: 'LOADING',
+    desc: 'Loading 애니메이션입니다. 각 div의 width와 float을 조정하여 키프레임을 통해 애니메이션을 만들었으며 각 animation-delay를 주어 차례대로 나타났다가 없어지는 효과를 주었습니다.',
+  },
+  {
+    id: 6,
+    num: '06',
+    title: 'BAR',
+    desc: 'Bar 애니메이션입니다. line의 height 크기를 다르게 주어 키프레임을 사용해 무한 반복의 rotate 애니메이션 효과를 주었습니다.',
+  },
+]
+
 const getAniInfo = (key: string) => {
   const NEW_LIST = ANI_INFO.filter((item) => {
     return item.key === key
@@ -500,4 +539,13 @@ const getProjectInfo = (key: string) => {
   return NEW_LIST[0].items
 }
 
-export { ANI_INFO, TITLE_INFO, DESCRIPTION, getAniInfo, getTitleInfo, getDescriptionInfo, getProjectInfo }
+export {
+  ANI_INFO,
+  TITLE_INFO,
+  DESCRIPTION,
+  ANIMATAION_INFO,
+  getAniInfo,
+  getTitleInfo,
+  getDescriptionInfo,
+  getProjectInfo,
+}

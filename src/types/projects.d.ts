@@ -28,6 +28,13 @@ export interface IUrl {
   btn: string
 }
 
+export interface IAnimation {
+  id: number
+  num: string
+  desc: string
+  title: string
+}
+
 export interface IProject {
   id: number
   num: string

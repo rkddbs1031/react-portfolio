@@ -1,0 +1,303 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/base/ir';
+
+.cube {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: rotatex(-20deg) rotatey(-140deg);
+  animation: rotateCube 6s linear infinite;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: colors.$WHITE;
+    animation: 4s 8s ease-in-out infinite;
+
+    &:nth-child(1) {
+      opacity: 0.75;
+      transform: rotatex(90deg) translatey(-100px);
+      transform-origin: center top;
+      animation-name: top;
+    }
+
+    &:nth-child(2) {
+      opacity: 0.65;
+      transform: rotateX(-90deg) translateY(100px);
+      transform-origin: center bottom;
+      animation-name: bottom;
+    }
+
+    &:nth-child(3) {
+      opacity: 0.55;
+      transform: rotatey(-90deg) translatex(-100px);
+      transform-origin: center left;
+      animation-name: left;
+    }
+
+    &:nth-child(4) {
+      opacity: 0.45;
+      transform: rotatey(90deg) translatex(100px);
+      transform-origin: center right;
+      animation-name: right;
+    }
+
+    &:nth-child(5) {
+      opacity: 0.35;
+      transform: rotateX(0deg) translateX(0);
+      transform-origin: center center;
+      animation-name: front;
+    }
+
+    &:nth-child(6) {
+      opacity: 0.25;
+      transform: rotateY(180deg) translateZ(100px);
+      transform-origin: center center;
+      animation-name: back;
+    }
+  }
+
+  @include animation.rotateCube;
+  @include animation.top;
+  @include animation.bottom;
+  @include animation.right;
+  @include animation.left;
+  @include animation.front;
+  @include animation.back;
+}
+
+.circles {
+  .row {
+    display: flex;
+    flex: 0 1 100%;
+
+    .circle {
+      width: 10px;
+      height: 10px;
+      margin: 5px 10px;
+      background: rgba(colors.$WHITE, 0.7);
+      border-radius: 50%;
+      transform-origin: top center;
+      animation: spin 1s linear infinite;
+    }
+
+    &:nth-child(1) .circle {
+      animation-delay: 100ms;
+    }
+
+    &:nth-child(2) .circle {
+      animation-delay: 200ms;
+    }
+
+    &:nth-child(3) .circle {
+      animation-delay: 300ms;
+    }
+
+    &:nth-child(4) .circle {
+      animation-delay: 400ms;
+    }
+
+    &:nth-child(5) .circle {
+      animation-delay: 500ms;
+    }
+
+    &:nth-child(6) .circle {
+      animation-delay: 600ms;
+    }
+
+    &:nth-child(7) .circle {
+      animation-delay: 700ms;
+    }
+
+    &:nth-child(8) .circle {
+      animation-delay: 800ms;
+    }
+
+    &:nth-child(9) .circle {
+      animation-delay: 900ms;
+    }
+
+    &:nth-child(10) .circle {
+      animation-delay: 1000ms;
+    }
+  }
+  @include animation.spin;
+}
+
+.tail {
+  .circle {
+    position: absolute;
+    animation: moveX 1s ease-in-out alternate infinite;
+
+    > div {
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: moveY 1s linear infinite;
+    }
+
+    &:nth-child(1) div {
+      width: 50px;
+      height: 50px;
+      background: rgba(colors.$WHITE, 0.8);
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+
+      div {
+        width: 42px;
+        height: 42px;
+        background: rgba(colors.$WHITE, 0.75);
+        animation-delay: 0.1s;
+      }
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+
+      div {
+        width: 34px;
+        height: 34px;
+        background: rgba(colors.$WHITE, 0.6);
+        animation-delay: 0.2s;
+      }
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+
+      div {
+        width: 26px;
+        height: 26px;
+        background: rgba(colors.$WHITE, 0.4);
+        animation-delay: 0.3s;
+      }
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+
+      div {
+        width: 18px;
+        height: 18px;
+        background: rgba(colors.$WHITE, 0.2);
+        animation-delay: 0.4s;
+      }
+    }
+  }
+  @include animation.moveX;
+  @include animation.moveY;
+}
+
+.card {
+  .appUI {
+    position: relative;
+    width: 130px;
+    height: 230px;
+    background-color: rgba(colors.$WHITE, 0.6);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 30%);
+    transition: 0.5s;
+    transform: rotate(-30deg) skewX(20deg);
+    animation: appUI 1s infinite alternate;
+
+    .cardItem {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+      animation: 1s infinite alternate;
+
+      &:nth-child(1) {
+        background: rgba(colors.$WHITE, 0.9);
+        animation-name: app1;
+      }
+
+      &:nth-child(2) {
+        background: rgba(colors.$WHITE, 0.8);
+        animation-name: app2;
+      }
+
+      &:nth-child(3) {
+        background: rgba(colors.$WHITE, 0.7);
+        animation-name: app3;
+      }
+
+      &:nth-child(4) {
+        background: rgba(colors.$WHITE, 0.6);
+        animation-name: app4;
+      }
+    }
+  }
+  @include animation.appUI;
+  @include animation.app1;
+  @include animation.app2;
+  @include animation.app3;
+  @include animation.app4;
+}
+
+.loading {
+  width: 290px;
+  height: 180px;
+
+  .loadingBar {
+    height: 30px;
+
+    div {
+      width: 0;
+      height: inherit;
+      animation: loading 3s infinite;
+    }
+
+    &:nth-child(1) div {
+      background: rgba(colors.$WHITE, 0.25);
+    }
+
+    &:nth-child(2) div {
+      background: rgba(colors.$WHITE, 0.4);
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(3) div {
+      background: rgba(colors.$WHITE, 0.55);
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(4) div {
+      background: rgba(colors.$WHITE, 0.7);
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5) div {
+      background: rgba(colors.$WHITE, 0.85);
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(6) div {
+      background: colors.$WHITE;
+      animation-delay: 0.5s;
+    }
+  }
+  @include animation.loading;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 350px;
+  margin: auto;
+  background-color: colors.$WHITE;
+  animation: bar 2s ease-in-out infinite;
+  @include animation.bar;
+}

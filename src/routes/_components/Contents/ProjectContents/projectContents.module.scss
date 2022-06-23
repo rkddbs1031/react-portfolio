@@ -9,6 +9,24 @@
   background: #cccac6;
 
   .project {
+    .num {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: Sunflower, sans-serif;
+      color: colors.$NUM_COLOR;
+      letter-spacing: 0.5px;
+    }
+
+    .desc {
+      font-family: 'Chosunilbo_myungjo', sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: colors.$SUB_TEXT;
+    }
+  }
+
+  > .project {
     position: relative;
     width: 100%;
     max-width: 1024px;
@@ -21,13 +39,7 @@
     }
 
     .num {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-family: Sunflower, sans-serif;
       font-size: 650px;
-      color: colors.$NUM_COLOR;
-      letter-spacing: 0.5px;
     }
 
     .left {
@@ -36,10 +48,6 @@
 
       .desc {
         padding-left: 8px;
-        font-family: 'Chosunilbo_myungjo', sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        color: colors.$SUB_TEXT;
         border-left: 2px solid colors.$DESC_BORDER;
       }
     }
@@ -129,6 +137,131 @@
         .btnContainer a {
           margin-right: 15px;
           margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .aniProjects {
+    @include flexbox.flexbox(center, start);
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+    padding: 50px 0;
+    margin: 0 auto;
+
+    .project {
+      position: relative;
+      cursor: pointer;
+
+      +.project {
+        margin-top: 100px;
+      }
+
+      &:hover {
+        .num {
+          color: rgba(colors.$WHITE, 0.7);
+          transform: scale(1.2);
+        }
+      }
+
+      .num {
+        left: -50px;
+        font-size: 200px;
+        transition: 0.8s;
+      }
+
+      .title {
+        position: relative;
+        z-index: 4;
+        margin: 80px 0 0 20px;
+        overflow: hidden;
+        font-family: Miracle, sans-serif;
+        font-size: 60px;
+        line-height: 70px;
+        color: colors.$BLACK;
+      }
+
+      .descContainer {
+        padding: 10px 0;
+        border-bottom: 1px solid colors.$ANI_BORDER;
+      }
+
+      .box {
+        position: relative;
+        top: -40px;
+        width: 100%;
+        background: colors.$ANI_BOX;
+        @include flexbox.flexbox(center, center);
+      }
+
+      &:nth-child(1) {
+        width: 70%;
+
+        .box {
+          height: 450px;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 40%;
+
+        .box {
+          height: 580px;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 43%;
+        margin-top: -400px;
+
+        .box {
+          height: 500px;
+        }
+      }
+
+      &:nth-child(4) {
+        width: 70%;
+
+        .box {
+          height: 400px;
+        }
+      }
+
+      &:nth-child(5) {
+        width: 43%;
+
+        .box {
+          height: 400px;
+        }
+      }
+
+      &:nth-child(6) {
+        width: 45%;
+        margin-top: -100px;
+
+        .box {
+          position: relative;
+          height: 500px;
+        }
+      }
+
+      &:nth-child(7) {
+        width: 70%;
+      }
+
+      &:nth-child(2n) {
+        align-self: flex-end;
+
+        .num {
+          right: -20px;
+          left: auto;
+        }
+
+        .title {
+          margin-right: 20px;
+          margin-left: 0;
+          text-align: right;
         }
       }
     }
