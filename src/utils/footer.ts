@@ -69,8 +69,8 @@ const FOOTER_TOP = [
     items: [
       {
         id: 51,
-        text: 'Script',
-        href: '/projects/script',
+        text: 'Web',
+        href: '/projects/web',
       },
       {
         id: 52,
