@@ -109,10 +109,6 @@ const TAB_ITEM = [
         id: 21,
         item: 'Bar',
       },
-      {
-        id: 22,
-        item: 'SVG',
-      },
     ],
   },
 ]
