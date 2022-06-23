@@ -63,6 +63,22 @@ const FOOTER_TOP = [
       },
     ],
   },
+  {
+    id: 5,
+    key: 'script',
+    items: [
+      {
+        id: 51,
+        text: 'Script',
+        href: '/projects/script',
+      },
+      {
+        id: 52,
+        text: 'Animation',
+        href: '/projects/animation',
+      },
+    ],
+  },
 ]
 
 const FOOTER_INFO = [

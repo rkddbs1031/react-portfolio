@@ -60,7 +60,7 @@ const TAB_ITEM = [
   {
     id: 3,
     tab: 'SCRIPT',
-    key: 'javascript',
+    key: 'script',
     items: [
       {
         id: 12,

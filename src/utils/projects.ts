@@ -9,6 +9,11 @@ const ANI_INFO = [
     key: 'web',
     items: [{ span: 'Web Project' }],
   },
+  {
+    id: 3,
+    key: 'script',
+    items: [{ span: 'Script Project' }],
+  },
 ]
 
 const TITLE_INFO = [
@@ -40,6 +45,20 @@ const TITLE_INFO = [
       },
     ],
   },
+  {
+    id: 7,
+    key: 'script',
+    items: [
+      {
+        id: 8,
+        text: 'One-of-the-Projects',
+      },
+      {
+        id: 9,
+        text: 'is Creative Scripts',
+      },
+    ],
+  },
 ]
 
 const DESCRIPTION = [
@@ -55,6 +74,13 @@ const DESCRIPTION = [
     key: 'web',
     items: {
       text: '저의 퍼블리싱 웹 프로젝트입니다. 웹표준, 반응형을 고려하여 제작한 웹사이트와 퍼블리싱 및 기존 브랜드 웹사이트 리뉴얼을 작업하였습니다. 재밌게 봐주세요.',
+    },
+  },
+  {
+    id: 3,
+    key: 'script',
+    items: {
+      text: '21년도 부터 작업한 스크립트 프로젝트입니다. 자바스크립트에 대해 더 열심히 공부해서 멋지고 완벽한 작업물들을 만들어내고 싶습니다!',
     },
   },
 ]
@@ -328,6 +354,92 @@ const PROJECT_INFO = [
         img: {
           src: '/img/port08.png',
           alt: '프로젝트5',
+        },
+      },
+    ],
+  },
+  {
+    id: 14,
+    key: 'script',
+    items: [
+      {
+        id: 15,
+        num: '01',
+        desc: '스크롤 값에 따라 다양한 PARALLAX EFFECT를 주는 스크립트입니다.',
+        h2: {
+          text1: 'PARALLAX EFFECT',
+          text2: '',
+        },
+        urls: [
+          {
+            id: 1,
+            href: 'http://yoooon.dothome.co.kr/port_react/js-work/parallaxEffect/01',
+            btn: 'more site',
+          },
+        ],
+        img: {
+          src: '/img/script01.png',
+          alt: '스크립트1',
+        },
+      },
+      {
+        id: 16,
+        num: '02',
+        desc: '마우스 커서의 움직임에 따라 다양한 mouse effect를 주는 스크립트입니다.',
+        h2: {
+          text1: 'MOUSE EFFECT',
+          text2: '',
+        },
+        urls: [
+          {
+            id: 1,
+            href: 'http://yoooon.dothome.co.kr/port_react/js-work/mouseEffect/01',
+            btn: 'more site',
+          },
+        ],
+        img: {
+          src: '/img/script02.png',
+          alt: '스크립트2',
+        },
+      },
+      {
+        id: 17,
+        num: '03',
+        desc: '스크립트를 이용하여 보여주는 다양한 slide입니다.',
+        h2: {
+          text1: 'SLIDER EFFECT',
+          text2: '',
+        },
+        urls: [
+          {
+            id: 1,
+            href: 'http://yoooon.dothome.co.kr/port_react/js-work/sliderEffect/01',
+            btn: 'more site',
+          },
+        ],
+        img: {
+          src: '/img/script03.png',
+          alt: '스크립트3',
+        },
+      },
+      {
+        id: 18,
+        num: '04',
+        desc: 'javascript를 이용하여 chrome의 momentum앱을 clone하였습니다. TODO LIST, 랜덤 배경화면, 시계,날씨 정보를 알 수 있습니다',
+        h2: {
+          text1: 'MOMENTUM',
+          text2: '',
+        },
+        urls: [
+          {
+            id: 1,
+            href: 'http://yoooon.dothome.co.kr/port_react/js-work/momentum',
+            btn: 'more site',
+          },
+        ],
+        img: {
+          src: '/img/script06.png',
+          alt: '스크립트4',
         },
       },
     ],
