@@ -1,10 +1,10 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
 
-import { useEffect } from 'hooks'
 import Header from './_components/Header'
 import Main from './Main'
 import Projects from './Projects'
 import ReactProjects from './ReactProjects'
+import WebProjects from './WebProjects'
 import About from './About'
 import './routes.module.scss'
 
@@ -16,7 +16,8 @@ const App = () => {
         <Route path='/' element={<Main />} />
         <Route path='projects' element={<Outlet />}>
           <Route path='' element={<Projects />} />
-          <Route path=':react' element={<ReactProjects />} />
+          <Route path='react' element={<ReactProjects />} />
+          <Route path='web' element={<WebProjects />} />
         </Route>
         <Route path='about' element={<About />} />
       </Routes>

@@ -43,7 +43,23 @@ const FOOTER_TOP = [
       {
         id: 32,
         text: 'Web',
-        href: '/web',
+        href: '/projects/web',
+      },
+    ],
+  },
+  {
+    id: 4,
+    key: 'web',
+    items: [
+      {
+        id: 41,
+        text: 'React & Vue',
+        href: '/projects/react',
+      },
+      {
+        id: 42,
+        text: 'Script',
+        href: '/projects/script',
       },
     ],
   },
