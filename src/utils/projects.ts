@@ -1,3 +1,17 @@
+import EX from '../assets/img/EX.png'
+import Port01 from '../assets/img/port01.png'
+// import Port02 from '../assets/img/port02.png' // YOON-PLAY
+// import Port03 from '../assets/img/port03.png' // MOVIE-APP
+import Web01 from '../assets/img/web01.png'
+import Web02 from '../assets/img/web02.png'
+import Web03 from '../assets/img/web03.png'
+import Web04 from '../assets/img/web04.png'
+import Web05 from '../assets/img/web05.png'
+import Script01 from '../assets/img/script01.png'
+import Script02 from '../assets/img/script02.png'
+import Script03 from '../assets/img/script03.png'
+import Script04 from '../assets/img/script04.png'
+
 const ANI_INFO = [
   {
     id: 1,
@@ -137,7 +151,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/port02.png',
+          src: Port01,
           alt: '프로젝트1',
         },
       },
@@ -162,7 +176,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/EX.png', // 수정해야함
+          src: EX, // 수정해야함
           alt: '프로젝트1',
         },
       },
@@ -187,7 +201,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/EX.png', // 수정해야함
+          src: EX, // 수정해야함
           alt: '프로젝트1',
         },
       },
@@ -207,7 +221,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/EX.png', // 수정해야함
+          src: EX, // 수정해야함
           alt: '프로젝트1',
         },
       },
@@ -227,7 +241,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/EX.png', // 수정해야함
+          src: EX, // 수정해야함
           alt: '프로젝트1',
         },
       },
@@ -252,7 +266,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/EX.png', // 수정해야함
+          src: EX, // 수정해야함
           alt: '프로젝트1',
         },
       },
@@ -283,7 +297,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/port05.png',
+          src: Web01,
           alt: '프로젝트1',
         },
       },
@@ -308,7 +322,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/port06.png',
+          src: Web02,
           alt: '프로젝트2',
         },
       },
@@ -328,7 +342,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/port04.png', // 수정해야함
+          src: Web03,
           alt: '프로젝트3',
         },
       },
@@ -353,7 +367,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/port07.png', // 수정해야함
+          src: Web04,
           alt: '프로젝트4',
         },
       },
@@ -378,7 +392,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/port08.png',
+          src: Web05,
           alt: '프로젝트5',
         },
       },
@@ -404,7 +418,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/script01.png',
+          src: Script01,
           alt: '스크립트1',
         },
       },
@@ -424,7 +438,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/script02.png',
+          src: Script02,
           alt: '스크립트2',
         },
       },
@@ -444,7 +458,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/script03.png',
+          src: Script03,
           alt: '스크립트3',
         },
       },
@@ -464,7 +478,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: '/img/script06.png',
+          src: Script04,
           alt: '스크립트4',
         },
       },

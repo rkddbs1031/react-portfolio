@@ -1,5 +1,5 @@
 import { SUB_KEYWORD, KEYWORD } from 'utils/about'
-import AboutImg from 'assets/img/about_sub2.jpg'
+import AboutSub02 from 'assets/img/about_sub2.jpg'
 import styles from './about.module.scss'
 
 const AboutKeyword = () => {
@@ -9,7 +9,7 @@ const AboutKeyword = () => {
         <h2>MY KEYWORD</h2>
         <div className={styles.titleContainer}>
           <div className={styles.imgWrap}>
-            <img src={AboutImg} alt='about_img2' />
+            <img src={AboutSub02} alt='about_img2' />
           </div>
           <div className={styles.subKeyword}>
             {SUB_KEYWORD.map((item) => (
