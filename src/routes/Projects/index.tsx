@@ -3,7 +3,7 @@ import { MouseEvent, useState } from 'react'
 import { TAB_ITEM } from 'utils/tab'
 import { cx } from 'styles'
 
-import Contents from '../_components/Contents'
+import Header from 'routes/_components/Header'
 import TabContents from './TabContents'
 import Footer from '../_components/Footer'
 import styles from './projects.module.scss'
@@ -20,23 +20,22 @@ const Project = () => {
 
   return (
     <>
-      <Contents>
-        <section className={styles.projectContainer}>
-          <h2 className={styles.ir_su}>Projects</h2>
-          <div className={styles.tab}>
-            <ul>
-              {TAB_ITEM.map((item) => (
-                <li key={item.id} className={cx({ [styles.isActive]: tabKey === item.key })}>
-                  <button type='button' data-key={item.key} onClick={handleTabClick}>
-                    {item.tab}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <TabContents tabKey={tabKey} hrefItem={hrefItem} />
-        </section>
-      </Contents>
+      <Header />
+      <section className={styles.projectContainer}>
+        <h2 className={styles.ir_su}>Projects</h2>
+        <div className={styles.tab}>
+          <ul>
+            {TAB_ITEM.map((item) => (
+              <li key={item.id} className={cx({ [styles.isActive]: tabKey === item.key })}>
+                <button type='button' data-key={item.key} onClick={handleTabClick}>
+                  {item.tab}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <TabContents tabKey={tabKey} hrefItem={hrefItem} />
+      </section>
       <Footer path='projects' />
     </>
   )
