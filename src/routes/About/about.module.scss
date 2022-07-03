@@ -4,6 +4,267 @@
 @use '/src/styles/mixins/animation';
 @use '/src/styles/base/ir';
 
-.aboutContainer {
-  border: 1px solid;
+.container {
+  padding: 150px 100px;
+  font-family: Miracle, sans-serif;
+  color: colors.$BLACK2;
+  background: colors.$ABOUT_BG2;
+}
+
+.section1 {
+  position: relative;
+  height: 100vh;
+  padding: 0 50px;
+  overflow: hidden;
+  background: colors.$ABOUT_BG;
+
+  .mainText {
+    position: absolute;
+    top: 53%;
+    left: 5vw;
+    z-index: 5;
+    font-family: Miracle, sans-serif;
+    line-height: 1.3;
+    transform: translateY(-50%);
+
+    p {
+      font-size: 7vw;
+      color: colors.$ABOUT_COLOR1;
+      letter-spacing: -0.2vw;
+
+      +.feText {
+        margin-left: 14vw;
+      }
+
+      +.devText {
+        font-size: 7vw;
+      }
+    }
+
+    em {
+      color: colors.$ABOUT_COLOR2;
+    }
+
+    .subText {
+      margin-top: 30px;
+      font-family: Abel, sans-serif;
+      font-size: 3vw;
+      color: colors.$ABOUT_SUB_TEXT;
+
+      .line {
+        display: inline-block;
+        width: 26vw;
+        height: 1px;
+        margin-right: 10px;
+        background: colors.$ABOUT_SUB_TEXT;
+      }
+    }
+  }
+
+  .aboutImg {
+    position: absolute;
+    right: 5vw;
+    bottom: -8%;
+    width: 36vw;
+    overflow: hidden;
+    border-radius: 50% 50% 0 0;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.section2 {
+  h2 {
+    position: relative;
+    z-index: 5;
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  .imgWrap {
+    width: 40%;
+    margin: -50px auto 0;
+
+    img {
+      width: 100%;
+      cursor: pointer;
+      filter: grayscale(0.9);
+      transition: 0.4s;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .textWrap {
+    margin-top: 50px;
+    text-align: center;
+
+    h3 {
+      margin-bottom: 50px;
+      font-size: 50px;
+
+      span {
+        display: block;
+        margin-top: 10px;
+        font-size: 40px;
+      }
+    }
+
+    .desc {
+      font-family: 'Chosunilbo_myungjo', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+
+      strong {
+        display: block;
+      }
+    }
+
+    .desc1 {
+      margin-bottom: 40px;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    .desc2 {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .descBottom {
+      margin-top: 40px;
+      @include flexbox.flexbox(between, center);
+
+      p {
+        width: 48%;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.section3 {
+  h2 {
+    position: relative;
+    z-index: 5;
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  .titleContainer {
+    position: relative;
+  }
+
+  .imgWrap {
+    width: 35%;
+    margin: 0 auto;
+    margin-top: -50px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+      transition: 0.5s;
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .subKeyword1,
+  .subKeyword2 {
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 1.5vw;
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.2vw;
+      color: colors.$GRAY9;
+      letter-spacing: 1px;
+    }
+  }
+
+  .subKeyword1 {
+    bottom: 50px;
+    left: 5vw;
+    font-family: 'Chosunilbo_myungjo', sans-serif;
+    font-size: 1.3vw;
+    text-align: right;
+    border-right: 1px solid colors.$GRAYA;
+
+    span {
+      font-family: Miracle, sans-serif;
+    }
+  }
+
+  .subKeyword2 {
+    top: 14vw;
+    right: 12vw;
+    border-left: 1px solid colors.$GRAYA;
+  }
+
+  .keyword {
+    @include flexbox.flexbox(between, start);
+    margin-top: 150px;
+
+    h3 {
+      width: 43%;
+      font-size: 6vw;
+
+      span {
+        display: block;
+        margin-top: 15px;
+        font-size: 2vw;
+        color: colors.$KEYWORD_SUB;
+      }
+    }
+
+    .keywordContainer {
+      width: 50%;
+
+      li {
+        padding-bottom: 20px;
+        font-family: 'Chosunilbo_myungjo', sans-serif;
+        border-bottom: 1px solid colors.$GRAYA;
+
+        dd {
+          @include flexbox.flexbox(start, center);
+          margin-bottom: 15px;
+          font-size: 1.5vw;
+          letter-spacing: 0.2px;
+
+          span {
+            @include flexbox.flexbox(center, center);
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            font-size: 1.3vw;
+            background: colors.$KEYWORD_NUM;
+            border-radius: 50%;
+          }
+        }
+
+        dt {
+          font-size: 1.2vw;
+          line-height: 2.1vw;
+        }
+
+        + li {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
 }
