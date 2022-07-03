@@ -1,12 +1,11 @@
-import { cx } from 'styles'
 import { IAnimation } from 'types/projects'
 
-import Cube from 'routes/AnimationProjects/Cube'
-import Wave from 'routes/AnimationProjects/Wave'
-import Tail from 'routes/AnimationProjects/Tail'
-import Card from 'routes/AnimationProjects/Card'
-import Loading from 'routes/AnimationProjects/Loading'
-import Bar from 'routes/AnimationProjects/Bar'
+import Cube from 'routes/Projects/Animations/Cube'
+import Wave from 'routes/Projects/Animations/Wave'
+import Tail from 'routes/Projects/Animations/Tail'
+import Card from 'routes/Projects/Animations/Card'
+import Loading from 'routes/Projects/Animations/Loading'
+import Bar from 'routes/Projects/Animations/Bar'
 import styles from './projectContents.module.scss'
 
 interface IProps {

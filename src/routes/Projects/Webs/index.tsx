@@ -1,8 +1,8 @@
 import { useState, useMount } from 'hooks'
-
 import { ISpan, ITitle, IDescription, IProject } from 'types/projects'
 import { getAniInfo, getTitleInfo, getDescriptionInfo, getProjectInfo } from 'utils/projects'
 
+import Header from 'routes/_components/Header'
 import ProjectTitle from 'routes/_components/Contents/ProjectTitle'
 import ProjectContents from 'routes/_components/Contents/ProjectContents'
 import Footer from 'routes/_components/Footer'
@@ -22,6 +22,7 @@ const WebProjects = () => {
 
   return (
     <>
+      <Header />
       <ProjectTitle ANI_INFO={aniInfo} TITLE_INFO={titleInfo} DESCRIPTION={description} />
       <ProjectContents PROJECT_INFO={projectInfo} />
       <Footer path='web' />

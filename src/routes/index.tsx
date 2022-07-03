@@ -1,31 +1,34 @@
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
+import { useEffect } from 'hooks'
 
-import Header from './_components/Header'
 import Main from './Main'
 import Projects from './Projects'
-import ReactProjects from './ReactProjects'
-import WebProjects from './WebProjects'
-import ScriptProjects from './ScriptProjects'
-import AnimationProjects from './AnimationProjects'
+import ReactProjects from './Projects/Reacts'
+import WebProjects from './Projects/Webs'
+import ScriptProjects from './Projects/Scripts'
+import AnimationProjects from './Projects/Animations'
 import About from './About'
 import './routes.module.scss'
 
 const App = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='projects' element={<Outlet />}>
-          <Route path='' element={<Projects />} />
-          <Route path='react' element={<ReactProjects />} />
-          <Route path='web' element={<WebProjects />} />
-          <Route path='script' element={<ScriptProjects />} />
-          <Route path='animation' element={<AnimationProjects />} />
-        </Route>
-        <Route path='about' element={<About />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path='/' element={<Main />} />
+      <Route path='projects' element={<Outlet />}>
+        <Route path='' element={<Projects />} />
+        <Route path='react' element={<ReactProjects />} />
+        <Route path='web' element={<WebProjects />} />
+        <Route path='script' element={<ScriptProjects />} />
+        <Route path='animation' element={<AnimationProjects />} />
+      </Route>
+      <Route path=':about' element={<About />} />
+    </Routes>
   )
 }
 export default App
