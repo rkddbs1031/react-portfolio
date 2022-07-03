@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
+import { cx } from 'styles'
 import GNB from './GNB'
 import styles from './header.module.scss'
 
@@ -16,19 +17,25 @@ const Info = [
   },
 ]
 
-const Header = () => {
+interface IProps {
+  keyword?: string
+}
+
+const Header = ({ keyword }: IProps) => {
   return (
-    <header className={styles.header}>
+    <header className={cx(styles.header, { [styles.about]: keyword === 'about' })}>
       <h1>
         <NavLink to='/'>YOON.</NavLink>
       </h1>
-      <ul className={styles.info}>
-        {Info.map((item) => (
-          <li key={item.id}>
-            <a href={item.href}>{item.text}</a>
-          </li>
-        ))}
-      </ul>
+      {keyword === 'main' && (
+        <ul className={styles.info}>
+          {Info.map((item) => (
+            <li key={item.id}>
+              <a href={item.href}>{item.text}</a>
+            </li>
+          ))}
+        </ul>
+      )}
       <GNB />
     </header>
   )

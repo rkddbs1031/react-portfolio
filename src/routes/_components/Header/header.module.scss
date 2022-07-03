@@ -17,6 +17,16 @@
   animation: h1Show 0.6s 1s ease forwards;
   @include animation.h1Show;
 
+  &.about {
+    color: colors.$ABOUT_HEADER_TEXT;
+    background: colors.$ABOUT_BG;
+    border-color: colors.$ABOUT_HEADER_BORDER;
+
+    a {
+      color: colors.$ABOUT_HEADER_TEXT !important;
+    }
+  }
+
   h1 a {
     font-family: Abel, sans-serif;
     font-size: 24px;
