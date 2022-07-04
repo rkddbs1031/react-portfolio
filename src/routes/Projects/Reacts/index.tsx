@@ -1,7 +1,9 @@
 import { useState, useMount } from 'hooks'
+import { useLoad } from 'hooks/useLoad'
 import { ISpan, ITitle, IDescription, IProject } from 'types/projects'
 import { getAniInfo, getTitleInfo, getDescriptionInfo, getProjectInfo } from 'utils/projects'
 
+import Loading from 'routes/_components/Loading'
 import Header from 'routes/_components/Header'
 import ProjectTitle from 'routes/_components/Contents/ProjectTitle'
 import ProjectContents from 'routes/_components/Contents/ProjectContents'
@@ -12,6 +14,7 @@ const ReactProjects = () => {
   const [titleInfo, setTitleInfo] = useState<ITitle[]>([])
   const [description, setDescription] = useState<IDescription>()
   const [projectInfo, setProjectInfo] = useState<IProject[]>([])
+  const { isLoading } = useLoad()
 
   useMount(() => {
     setAniInfo(getAniInfo('react'))
@@ -20,6 +23,7 @@ const ReactProjects = () => {
     setProjectInfo(getProjectInfo('react'))
   })
 
+  if (isLoading) return <Loading />
   return (
     <>
       <Header />

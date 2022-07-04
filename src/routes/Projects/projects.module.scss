@@ -11,7 +11,7 @@
   padding: 120px 0;
 
   .tab {
-    margin: 0 0 80px;
+    margin: 0 0 100px;
     overflow: hidden;
 
     ul {
@@ -45,7 +45,6 @@
 
   .tabContents {
     width: 70%;
-    margin-bottom: 80px;
 
     ul {
       @include flexbox.flexbox(center, center);

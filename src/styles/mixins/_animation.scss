@@ -334,3 +334,16 @@
     to { height: 6vw; }
   }
 }
+
+@mixin blurText {
+
+  @keyframes blurText {
+    0% {
+      filter: blur(0);
+    }
+
+    100% {
+      filter: blur(4px);
+    }
+  }
+}
