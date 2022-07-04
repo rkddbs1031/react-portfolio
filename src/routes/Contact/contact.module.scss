@@ -1,0 +1,144 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/base/ir';
+
+.container {
+  padding: 100px;
+  font-family: Miracle, sans-serif;
+}
+
+.section1,
+.section2 {
+  background: colors.$CONTACT_BG;
+}
+
+.section1 {
+  @include flexbox.flexbox;
+  flex-direction: column;
+  height: 100vh;
+
+  .mainText {
+    position: relative;
+    font-size: 8.5vw;
+    line-height: 9vw;
+    text-align: center;
+
+    p:last-child {
+      color: colors.$COTACT_TITLE;
+    }
+
+    &::after {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      width: 0.3vw;
+      height: 0;
+      content: '';
+      background: #c1bbaf;
+      transform: translateX(-50%);
+      animation: contactLine 1.3s 1s infinite alternate;
+      @include animation.contactLine;
+    }
+
+    p {
+      overflow: hidden;
+
+      span {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: loadText 1.2s 0.2s forwards;
+        @include animation.loadText;
+      }
+
+      &:nth-child(2) span {
+        animation-delay: 0.4s;
+      }
+
+      &:last-child span {
+        animation-delay: 0.6s;
+      }
+    }
+  }
+}
+
+.section2 {
+  .container {
+    @include flexbox.flexbox(between, start);
+
+    .imgWrap {
+      width: 30vw;
+      overflow: hidden;
+      border-radius: 50% 50% 5px 5px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .info {
+      flex-direction: column;
+      width: 50%;
+      @include flexbox.flexbox(start, end);
+
+      h2 {
+        position: relative;
+        z-index: 5;
+        font-size: 5vw;
+        color: colors.$CONTACT_ME_COLOR;
+        text-align: right;
+
+        em {
+          font-size: 3vw;
+        }
+
+        &::before {
+          position: absolute;
+          top: 1vw;
+          left: 2vw;
+          z-index: -1;
+          width: 10vw;
+          height: 10vw;
+          content: '';
+          background: colors.$CONTACT_CIRCLE;
+          border-radius: 50%;
+        }
+      }
+
+      .contactItem {
+        width: 35vw;
+        margin-top: 80px;
+
+        li {
+          padding: 10px 0;
+          border-bottom: 1px solid colors.$WHITE;
+
+          a,
+          span {
+            font-family: Abel, sans-serif;
+            font-size: 1.7vw;
+            color: colors.$WHITE;
+            letter-spacing: 0.1px;
+          }
+
+          a {
+            color: colors.$WHITE;
+            @include flexbox.flexbox(between, center);
+          }
+
+          &:last-child span {
+            display: block;
+            text-align: right;
+          }
+
+          + li {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}

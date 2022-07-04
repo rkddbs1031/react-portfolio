@@ -8,6 +8,7 @@ import WebProjects from './Projects/Webs'
 import ScriptProjects from './Projects/Scripts'
 import AnimationProjects from './Projects/Animations'
 import About from './About'
+import Contact from './Contact'
 import './routes.module.scss'
 
 const App = () => {
@@ -27,7 +28,8 @@ const App = () => {
         <Route path='script' element={<ScriptProjects />} />
         <Route path='animation' element={<AnimationProjects />} />
       </Route>
-      <Route path=':about' element={<About />} />
+      <Route path='about' element={<About />} />
+      <Route path='contact' element={<Contact />} />
     </Routes>
   )
 }
