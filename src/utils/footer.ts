@@ -1,3 +1,5 @@
+import { GithubIcon, VelogIcon, NotionIcon } from 'assets/svgs'
+
 const FOOTER_TOP = [
   {
     id: 1,
@@ -95,6 +97,22 @@ const FOOTER_TOP = [
       },
     ],
   },
+  {
+    id: 7,
+    key: 'contact',
+    items: [
+      {
+        id: 71,
+        text: 'Home',
+        href: '/',
+      },
+      {
+        id: 72,
+        text: 'Projects',
+        href: '/projects',
+      },
+    ],
+  },
 ]
 
 const FOOTER_INFO = [
@@ -112,10 +130,58 @@ const FOOTER_INFO = [
   },
 ]
 
+const FOOTER_SOCIAL = [
+  {
+    id: 1,
+    svg: GithubIcon,
+    href: 'https://github.com/rkddbs1031',
+  },
+  {
+    id: 2,
+    svg: VelogIcon,
+    href: 'https://velog.io/@kxun_ii',
+  },
+  {
+    id: 3,
+    svg: NotionIcon,
+    href: 'https://www.notion.so/4db4a75b05c34c628d6aac418a922554',
+  },
+]
+
+const INFO = [
+  {
+    id: 1,
+    em: 'Front-end Developer',
+  },
+  {
+    id: 2,
+    em: 'ⓒ Yoon’s Portfolio 2021',
+  },
+]
+
+const SOCIAL_INFO = [
+  {
+    id: 1,
+    href: 'https://github.com/rkddbs1031',
+    text: 'Git',
+  },
+  {
+    id: 2,
+    href: 'https://velog.io/@kxun_ii',
+    text: 'Velog',
+  },
+  {
+    id: 3,
+    href: 'https://www.notion.so/4db4a75b05c34c628d6aac418a922554',
+    text: 'Notion',
+  },
+]
+
 const getFooterTop = (path: string) => {
   const NEW_LIST = FOOTER_TOP.filter((item) => {
     return item.key === path
   })
   return NEW_LIST[0].items
 }
-export { FOOTER_TOP, FOOTER_INFO, getFooterTop }
+
+export { FOOTER_TOP, FOOTER_INFO, FOOTER_SOCIAL, getFooterTop, INFO, SOCIAL_INFO }

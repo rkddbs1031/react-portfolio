@@ -328,3 +328,9 @@
     }
   }
 }
+
+@mixin contactLine {
+  @keyframes contactLine {
+    to { height: 6vw; }
+  }
+}

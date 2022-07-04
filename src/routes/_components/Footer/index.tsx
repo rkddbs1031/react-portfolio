@@ -1,29 +1,11 @@
 import { NavLink } from 'react-router-dom'
 
 import { useEffect, useState } from 'hooks'
-import { FOOTER_INFO, getFooterTop } from 'utils/footer'
+import { FOOTER_INFO, getFooterTop, FOOTER_SOCIAL } from 'utils/footer'
 import { IFotoerTop } from 'types/projects'
 
-import { GithubIcon, VelogIcon, NotionIcon, ArrowPrevIcon, ArrowNextIcon } from 'assets/svgs'
+import { ArrowPrevIcon, ArrowNextIcon } from 'assets/svgs'
 import styles from './footer.module.scss'
-
-const FOOTER_SOCIAL = [
-  {
-    id: 1,
-    svg: <GithubIcon />,
-    href: 'https://github.com/rkddbs1031',
-  },
-  {
-    id: 2,
-    svg: <VelogIcon />,
-    href: 'https://velog.io/@kxun_ii',
-  },
-  {
-    id: 3,
-    svg: <NotionIcon />,
-    href: 'https://www.notion.so/4db4a75b05c34c628d6aac418a922554',
-  },
-]
 
 interface IProps {
   path?: string
@@ -73,7 +55,7 @@ const Footer = ({ path }: IProps) => {
             {FOOTER_SOCIAL.map((item) => (
               <li key={item.id}>
                 <a href={item.href} target='_blank' rel='noreferrer'>
-                  {item.svg}
+                  <item.svg />
                 </a>
               </li>
             ))}

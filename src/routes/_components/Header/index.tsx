@@ -23,7 +23,13 @@ interface IProps {
 
 const Header = ({ keyword }: IProps) => {
   return (
-    <header className={cx(styles.header, { [styles.about]: keyword === 'about' })}>
+    <header
+      className={cx(
+        styles.header,
+        { [styles.about]: keyword === 'about' },
+        { [styles.contact]: keyword === 'contact' }
+      )}
+    >
       <h1>
         <NavLink to='/'>YOON.</NavLink>
       </h1>

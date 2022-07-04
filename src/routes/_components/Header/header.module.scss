@@ -27,6 +27,15 @@
     }
   }
 
+  &.contact {
+    background: colors.$CONTACT_BG;
+    border-bottom: none;
+
+    a {
+      color: colors.$BLACK2 !important;
+    }
+  }
+
   h1 a {
     font-family: Abel, sans-serif;
     font-size: 24px;
