@@ -1,5 +1,6 @@
 import { DESC_TOP, DESC_BOTTOM } from 'utils/about'
 
+import { AboutSvg } from 'assets/svgs'
 import AboutSub01 from 'assets/img/about_sub1.png'
 import styles from './about.module.scss'
 
@@ -10,6 +11,9 @@ const AboutMe = () => {
         <h2>WHO AM I ?</h2>
         <div className={styles.imgWrap}>
           <img src={AboutSub01} alt='about_img2' />
+        </div>
+        <div className={styles.svgWrap}>
+          <AboutSvg />
         </div>
         <div className={styles.textWrap}>
           <h3>
