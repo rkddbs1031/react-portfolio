@@ -5,7 +5,7 @@
 @use '/src/styles/base/ir';
 
 .container {
-  padding: 100px;
+  padding: 13vw 10vw;
   font-family: Miracle, sans-serif;
   color: colors.$BLACK2;
   background: colors.$ABOUT_BG2;
@@ -77,6 +77,8 @@
 }
 
 .section2 {
+  position: relative;
+
   h2 {
     position: relative;
     z-index: 5;
@@ -85,6 +87,8 @@
   }
 
   .imgWrap {
+    position: relative;
+    z-index: 3;
     width: 40%;
     margin: -50px auto 0;
 
@@ -98,6 +102,16 @@
         filter: grayscale(0);
       }
     }
+  }
+
+  .svgWrap {
+    position: absolute;
+    top: 10vw;
+    right: 22vw;
+    z-index: 2;
+    width: 15vw;
+    animation: rotateText 10s linear infinite;
+    @include animation.rotateText;
   }
 
   .textWrap {
