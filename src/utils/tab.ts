@@ -18,14 +18,10 @@ const TAB_ITEM = [
       },
       {
         id: 4,
-        item: 'YOON-Chat',
+        item: 'YWitter',
       },
       {
         id: 5,
-        item: 'VUE-To do list',
-      },
-      {
-        id: 6,
         item: 'VUE-Board',
       },
     ],
@@ -78,6 +74,10 @@ const TAB_ITEM = [
         id: 15,
         item: 'Momentum',
       },
+      {
+        id: 16,
+        item: 'Vue ToDo List',
+      },
     ],
   },
   {
@@ -86,27 +86,27 @@ const TAB_ITEM = [
     key: 'animation',
     items: [
       {
-        id: 16,
+        id: 17,
         item: 'Cube',
       },
       {
-        id: 17,
+        id: 18,
         item: 'Wabe',
       },
       {
-        id: 18,
+        id: 19,
         item: 'Tail',
       },
       {
-        id: 19,
+        id: 20,
         item: '3D Card',
       },
       {
-        id: 20,
+        id: 21,
         item: 'Loading',
       },
       {
-        id: 21,
+        id: 22,
         item: 'Bar',
       },
     ],

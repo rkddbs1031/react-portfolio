@@ -141,11 +141,6 @@ const PROJECT_INFO = [
         urls: [
           {
             id: 1,
-            href: 'https://yoon-play.netlify.app/',
-            btn: 'view site',
-          },
-          {
-            id: 2,
             href: 'https://github.com/rkddbs1031/react-portfolio',
             btn: 'view code',
           },
@@ -191,11 +186,6 @@ const PROJECT_INFO = [
         urls: [
           {
             id: 1,
-            href: 'https://yoon-play.netlify.app/', // 수정해야함
-            btn: 'view site',
-          },
-          {
-            id: 2,
             href: 'https://github.com/rkddbs1031/WOB_Grip_Assignment',
             btn: 'view code',
           },
@@ -208,10 +198,10 @@ const PROJECT_INFO = [
       {
         id: 5,
         num: '04',
-        desc: '작업중으로 추후 업로드 예정입니다.',
+        desc: 'firebase와 React를 이용하여 작업한 Twitter입니다. 현재 작업중에 있으며 추후 업로드 예정입니다.',
         h2: {
           text1: 'REACT',
-          text2: 'YOON-CHAT',
+          text2: 'YWitter',
         },
         urls: [
           {
@@ -237,31 +227,6 @@ const PROJECT_INFO = [
           {
             id: 1,
             href: 'https://github.com/rkddbs1031/board', // 수정해야함
-            btn: 'view code',
-          },
-        ],
-        img: {
-          src: EX, // 수정해야함
-          alt: '프로젝트1',
-        },
-      },
-      {
-        id: 7,
-        num: '06',
-        desc: 'Vue로 만든 Todo List입니다. localStorage와 JSON파일을 이용하여 구현하였습니다.',
-        h2: {
-          text1: 'VUE',
-          text2: 'TO DO LIST',
-        },
-        urls: [
-          {
-            id: 1,
-            href: 'https://yoon-play.netlify.app/', // 수정해야함
-            btn: 'view site',
-          },
-          {
-            id: 2,
-            href: 'https://github.com/rkddbs1031/vue-todolist',
             btn: 'view code',
           },
         ],
@@ -480,6 +445,26 @@ const PROJECT_INFO = [
         img: {
           src: Script04,
           alt: '스크립트4',
+        },
+      },
+      {
+        id: 19,
+        num: '05',
+        desc: 'Vue로 만든 Todo List입니다. localStorage와 JSON파일을 이용하여 구현하였습니다.',
+        h2: {
+          text1: 'VUE',
+          text2: 'TO DO LIST',
+        },
+        urls: [
+          {
+            id: 1,
+            href: 'https://yoon-play.netlify.app/', // 수정해야함
+            btn: 'more site',
+          },
+        ],
+        img: {
+          src: EX, // 수정해야함
+          alt: '스크립트5',
         },
       },
     ],
