@@ -141,6 +141,11 @@ const PROJECT_INFO = [
         urls: [
           {
             id: 1,
+            href: 'https://yoon-portfolio.netlify.app/',
+            btn: 'view site',
+          },
+          {
+            id: 2,
             href: 'https://github.com/rkddbs1031/react-portfolio',
             btn: 'view code',
           },
