@@ -154,7 +154,7 @@
 
     .descBottom {
       margin-top: 40px;
-      @include flexbox.flexbox(between, center);
+      @include flexbox.flexbox(between, start);
 
       p {
         width: 48%;
