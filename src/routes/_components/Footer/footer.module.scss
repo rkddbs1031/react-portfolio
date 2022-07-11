@@ -5,6 +5,9 @@
 
 .footerContainer {
   background: colors.$FOOTER;
+  opacity: 0;
+  animation: mainFooter 0.8s 0.6s ease forwards;
+  @include animation.mainFooter;
 
   a {
     font-family: Sunflower, sans-serif;
