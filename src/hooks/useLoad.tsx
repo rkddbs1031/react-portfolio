@@ -1,10 +1,9 @@
 import { useState, useMount } from 'hooks'
 
 export const useLoad = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useMount(() => {
-    setIsLoading(true)
     const timeout = setTimeout(() => setIsLoading(false), 2000)
     return () => clearTimeout(timeout)
   })
