@@ -31,13 +31,19 @@
       font-size: 7vw;
       color: colors.$ABOUT_COLOR1;
       letter-spacing: -0.2vw;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: loadText 1.3s 0.2s forwards;
+      @include animation.loadText;
 
       +.feText {
         margin-left: 14vw;
+        animation-delay: 0.4s;
       }
 
       +.devText {
         font-size: 7vw;
+        animation-delay: 0.6s;
       }
     }
 

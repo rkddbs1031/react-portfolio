@@ -10,7 +10,9 @@ const AboutMain = () => {
         <p className={styles.feText}>
           CREATIVE <em>FRONT-END</em>
         </p>
-        <em className={styles.devText}>DEVELOPER</em>
+        <p className={styles.devText}>
+          <em>DEVELOPER</em>
+        </p>
         <div className={styles.subText}>
           <span className={styles.line} />
           <span>about me</span>
