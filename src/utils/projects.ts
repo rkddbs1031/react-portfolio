@@ -152,7 +152,7 @@ const PROJECT_INFO = [
         ],
         img: {
           src: Port01,
-          alt: '프로젝트1',
+          alt: '포트폴리오',
         },
       },
       {
@@ -177,7 +177,7 @@ const PROJECT_INFO = [
         ],
         img: {
           src: EX, // 수정해야함
-          alt: '프로젝트1',
+          alt: 'yoon-play 프로젝트',
         },
       },
       {
@@ -191,13 +191,18 @@ const PROJECT_INFO = [
         urls: [
           {
             id: 1,
-            href: 'https://github.com/rkddbs1031/WOB_Grip_Assignment',
+            href: 'https://yoon-movie-app.netlify.app/',
+            btn: 'view site',
+          },
+          {
+            id: 2,
+            href: 'https://github.com/rkddbs1031/yoon-movie-app',
             btn: 'view code',
           },
         ],
         img: {
           src: EX, // 수정해야함
-          alt: '프로젝트1',
+          alt: 'movie-app 프로젝트',
         },
       },
       {
