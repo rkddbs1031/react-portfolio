@@ -1,16 +1,18 @@
-import EX from '../assets/img/EX.png'
-import Port01 from '../assets/img/port01.png'
-// import Port02 from '../assets/img/port02.png' // YOON-PLAY
-// import Port03 from '../assets/img/port03.png' // MOVIE-APP
-import Web01 from '../assets/img/web01.png'
-import Web02 from '../assets/img/web02.png'
-import Web03 from '../assets/img/web03.png'
-import Web04 from '../assets/img/web04.png'
-import Web05 from '../assets/img/web05.png'
-import Script01 from '../assets/img/script01.png'
-import Script02 from '../assets/img/script02.png'
-import Script03 from '../assets/img/script03.png'
-import Script04 from '../assets/img/script04.png'
+import {
+  EX,
+  Port01,
+  Port02,
+  Port03,
+  Web01,
+  Web02,
+  Web03,
+  Web04,
+  Web05,
+  Script01,
+  Script02,
+  Script03,
+  Script04,
+} from 'assets/img'
 
 const ANI_INFO = [
   {
@@ -176,7 +178,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: EX, // 수정해야함
+          src: Port02,
           alt: 'yoon-play 프로젝트',
         },
       },
@@ -201,7 +203,7 @@ const PROJECT_INFO = [
           },
         ],
         img: {
-          src: EX, // 수정해야함
+          src: Port03,
           alt: 'movie-app 프로젝트',
         },
       },
