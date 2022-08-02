@@ -9,7 +9,7 @@ const GNB_ITEMS = [
   },
   {
     id: 2,
-    item: 'Jojn',
+    item: 'Join',
     href: 'join',
   },
 ]
