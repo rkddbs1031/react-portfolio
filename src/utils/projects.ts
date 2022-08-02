@@ -135,7 +135,7 @@ const PROJECT_INFO = [
       {
         id: 2,
         num: '01',
-        desc: '첫번째로 만든 저의 포트폴리오입니다. React로 만든 웹사이트이며 현재 추가적인 리팩토링을 하고있습니다.',
+        desc: '첫번째로 만든 저의 포트폴리오이며 React로 구현한 웹사이트입니다. 현재 추가적인 리팩토링을 진행하고 있으며, React, Vue, publishing등 프로젝트와 스크립트, 다양한 애니메이션 그리고 저에 대한 About 페이지로 기록되어 있습니다. 직접 Figma를 통해 레이아웃 및 디자인을 하였으며, 본 프로젝트를 구현하였습니다.',
         h2: {
           text1: 'THE FIRST',
           text2: 'PORTFOLIO',
@@ -160,7 +160,7 @@ const PROJECT_INFO = [
       {
         id: 3,
         num: '02',
-        desc: '그날의 분위기와 기분에 따라 음악을 추천해주는 뮤직플레이어. React-Query, Youtube-API를 이용하여 만든 개인 프로젝트입니다.',
+        desc: '그날의 분위기와 기분에 따라 음악을 추천해주는 뮤직플레이어입니다. React, Axios, useQuery 그리고 Youtube API 이용하여 구현한 개인 프로젝트이며, Recoil을 통해 상태관리를 하였습니다. Figma를 이용하여 직접 디자인을 제작한 뒤 개발을 진행하였습니다.',
         h2: {
           text1: 'REACT',
           text2: 'YOON-PLAY',
@@ -185,7 +185,7 @@ const PROJECT_INFO = [
       {
         id: 4,
         num: '03',
-        desc: '원하는 영화를 검색하고 즐겨찾기 등록 / 삭제할 수 있는 React Movie App. omdbAPI를 이용하여 만든 개인 프로젝트이며 무한 스크롤이 구현되어있습니다.',
+        desc: '원하는 영화를 검색하고 즐겨찾기 등록/삭제할 수 있는 React Movie App 입니다. React, Axios, useQuery 그리고 omdb API를 이용하여 구현한 개인 프로젝트이며, intersection-observer를 통해 무한 스크롤이 구현되어있습니다. Recoil을 통해 상태관리를 하였으며, Figma를 이용하여 직접 디자인을 완료한 뒤 개발을 진행하였습니다.',
         h2: {
           text1: 'REACT',
           text2: 'MOVIE-APP',
@@ -218,7 +218,7 @@ const PROJECT_INFO = [
         urls: [
           {
             id: 1,
-            href: 'https://github.com/rkddbs1031', // 수정해야함
+            href: 'https://github.com/rkddbs1031/yoon-twitter',
             btn: 'view code',
           },
         ],
@@ -230,7 +230,7 @@ const PROJECT_INFO = [
       {
         id: 6,
         num: '05',
-        desc: 'Vue로 만든 게시판입니다. Restful API를 이용하여 CRUD 게시판, 댓글이 구현되어있습니다. 현재 사이트는 확인이 불가능 합니다.',
+        desc: 'Vue로 만든 게시판입니다. Restful API를 이용하여 로그인 및 회원가입, CRUD 게시판 (게시판 보기, 작성, 보기, 수정, 삭제), 그리고 댓글이 구현되어있습니다. Vuetify를 이용하여 레이아웃을 나타내었으며, Vuex를 통해 상태관리를 하였습니다. 현재 사이트는 확인이 불가능 합니다.',
         h2: {
           text1: 'VUE',
           text2: 'BOARD',
@@ -238,7 +238,7 @@ const PROJECT_INFO = [
         urls: [
           {
             id: 1,
-            href: 'https://github.com/rkddbs1031/board', // 수정해야함
+            href: 'https://github.com/rkddbs1031/board',
             btn: 'view code',
           },
         ],
