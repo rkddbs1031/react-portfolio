@@ -155,7 +155,7 @@ const INFO = [
   },
   {
     id: 2,
-    em: 'ⓒ Yoon’s Portfolio 2021',
+    em: 'ⓒ Yoon’s Portfolio 2022',
   },
 ]
 

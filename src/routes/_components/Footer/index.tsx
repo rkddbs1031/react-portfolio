@@ -60,7 +60,7 @@ const Footer = ({ path }: IProps) => {
               </li>
             ))}
           </ul>
-          <p className={styles.copyright}>ⓒ YOON’S REACT PORTFOLIO 2022</p>
+          <p className={styles.copyright}>&copy; YOON’S REACT PORTFOLIO {new Date().getFullYear()}</p>
         </div>
       </div>
     </footer>
