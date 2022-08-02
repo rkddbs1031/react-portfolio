@@ -26,7 +26,7 @@ const ContactInfo = () => {
               </li>
             ))}
             <li>
-              <span>ⓒ YOON’S REACT PORTFOLIO 2021</span>
+              <span>&copy; YOON’S REACT PORTFOLIO {new Date().getFullYear()}</span>
             </li>
           </ul>
         </div>
