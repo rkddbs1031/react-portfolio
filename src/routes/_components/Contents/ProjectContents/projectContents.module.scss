@@ -21,8 +21,10 @@
     .desc {
       font-family: 'Chosunilbo_myungjo', sans-serif;
       font-size: 14px;
-      line-height: 20px;
+      line-height: 24px;
       color: colors.$SUB_TEXT;
+      text-align: justify;
+      letter-spacing: 0.05px;
     }
   }
 
